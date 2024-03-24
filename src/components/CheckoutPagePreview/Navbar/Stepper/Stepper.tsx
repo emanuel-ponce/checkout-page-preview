@@ -1,8 +1,15 @@
-import { FaAngleRight, FaChevronRight } from "react-icons/fa";
-import BusinessModelButton from "./Step1/BusinessModelButton/BusinessModelButton";
+import Step1 from './Step1/Step1';
+import { useAppSelector } from 'store';
+import { selectCurrentStep, selectTotalSteps } from '@slices/local/stepper.slice';
+import Step3 from './Step3/Step3';
+import Step2 from './Step2/Step2';
+import NextButton from './NextButton/NextButton';
 
 function Stepper() {
-
+  const currentStep = useAppSelector(selectCurrentStep);
+  const totalSteps = useAppSelector(selectTotalSteps);
+  const steps = [null, Step1, Step2, Step3];
+  const StepComponent = steps[currentStep];
   return (
     <div className="pb-6">
       <div className="flex flex-col">
@@ -10,18 +17,12 @@ function Stepper() {
         <div className="flex flex-1 justify-between">
           <div>
             <span className="font-medium">Choose your use case</span>
-            <span className="text-xs ml-2">1 of 3</span>
+            <span className="text-xs ml-2">
+              {currentStep} of {totalSteps}
+            </span>
           </div>
-          <div className="flex  gap-3">
-            <BusinessModelButton />
-            <BusinessModelButton />
-          </div>
-          <div className="self-end">
-            <button className="bg-blue text-white px-3 py-2 rounded-[4px] flex items-center gap-3">
-              <span className="text-sm font-medium">Next</span>
-              <FaChevronRight className="h-[12px] w-[7px] text-sm"/>
-            </button>
-          </div>
+          {StepComponent && <StepComponent />}
+          <NextButton />
         </div>
       </div>
     </div>

@@ -1,17 +1,24 @@
-import { BsBoxFill } from "react-icons/bs";
+import { ReactElement } from 'react';
+import { BsBoxFill } from 'react-icons/bs';
 
-function BusinessModelButton() {
+interface BusinessModelButtonProps {
+  onClick: () => any;
+  isSelected: boolean;
+  title: string;
+  subtitle: string;
+  icon: ReactElement;
+}
 
-    return (
-      <button className="p-[10px] border-[2px] rounded-md border-blue flex">
-        <BsBoxFill className="mt-1 w-[12px] h-[17px] text-theme-iconBlue"/>  
-        <div className="text-start ml-2">
-          <h3 className="text-theme-default">One-time payments</h3>
-          <span className="text-gray text-sm">Digital or physical goods and services</span>
-        </div>
-      </button>
-    );
-  }
-  
-  export default BusinessModelButton;
-  
+function BusinessModelButton({ onClick, isSelected, title, subtitle, icon }: BusinessModelButtonProps) {
+  return (
+    <button className={`rounded-md flex ${isSelected ? 'border-blue border-2 p-[10px]' : 'p-[11px] border border-slate '}`} onClick={onClick}>
+      {icon}
+      <div className="text-start ml-2">
+        <h3 className="text-theme-default">{title}</h3>
+        <span className="text-gray text-sm">{subtitle}</span>
+      </div>
+    </button>
+  );
+}
+
+export default BusinessModelButton;
