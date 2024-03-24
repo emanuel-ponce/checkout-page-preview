@@ -7,11 +7,16 @@ const config: Config = {
       colors: {
         theme: {
           iconBlue: '#6c8eef',
-          default: '#3c4257'
+          iconGray: '#8792a2',
+          default: '#3c4257',
+          outline: 'rgba(58, 151, 212, 0.36)'
         },
         blue: '#635bff',
         gray: '#697386',
         slate: 'rgba(60, 66, 87, 0.12)'
+      },
+      boxShadow: {
+        md: ' 0 0 0 2px rgba(58, 151, 212, 0.36)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

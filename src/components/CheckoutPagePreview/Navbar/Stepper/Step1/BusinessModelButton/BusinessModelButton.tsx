@@ -11,7 +11,7 @@ interface BusinessModelButtonProps {
 
 function BusinessModelButton({ onClick, isSelected, title, subtitle, icon }: BusinessModelButtonProps) {
   return (
-    <button className={`rounded-md flex ${isSelected ? 'border-blue border-2 p-[10px]' : 'p-[11px] border border-slate '}`} onClick={onClick}>
+    <button className={`rounded-md flex focus:shadow-md ${isSelected ? 'border-blue border-2 p-[10px]' : 'p-[11px] border border-slate '}`} onClick={onClick}>
       {icon}
       <div className="text-start ml-2">
         <h3 className="text-theme-default">{title}</h3>
