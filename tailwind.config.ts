@@ -10,7 +10,8 @@ const config: Config = {
           default: '#3c4257'
         },
         blue: '#635bff',
-        gray: '#697386'
+        gray: '#697386',
+        slate: 'rgba(60, 66, 87, 0.12)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

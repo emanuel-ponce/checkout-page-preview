@@ -16,7 +16,6 @@
     "paths": {
       "@slices/*": ["state/slices/*"],
       "@models/*": ["shared/models/*"],
-      "@assets/*": ["shared/models/*"],
       "@utils/*": ["shared/utils/*"],
       "@pages/*": ["pages/*"],
       "@globalStyles": ["styles/globals.css"],
