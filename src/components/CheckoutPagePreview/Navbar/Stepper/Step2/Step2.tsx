@@ -16,10 +16,13 @@ import {
   setTaxSupport
 } from '@slices/local/customization.slice';
 import ColorSwitcher from './ColorSwitcher/ColorSwitcher';
+import { withTranslation } from 'react-i18next';
+import { WithTranslation } from 'next-i18next';
+import { loadTranslations } from './i18n/translations';
+import i18n from 'shared/i18n/i18n.config';
+loadTranslations(i18n);
 
-interface Step2Props {}
-
-function Step2({}: Step2Props) {
+function Step2({ t }: WithTranslation) {
   const dispatch = useAppDispatch();
   const brandColor = useAppSelector(selectBrandColor);
   const colors = [
@@ -33,17 +36,17 @@ function Step2({}: Step2Props) {
     }
   ];
   const switches = [
-    { label: 'Coupons', selector: selectCoupons, setter: setCoupons },
-    { label: 'Shipping', selector: selectShipping, setter: setShipping },
-    { label: 'Store policies', selector: selectStorePolicies, setter: setStorePolicies },
-    { label: 'Tax support', selector: selectTaxSupport, setter: setTaxSupport },
-    { label: 'Phone number', selector: selectPhoneNumber, setter: setPhoneNumber }
+    { label: t('STEP_TWO.OPTIONS.COUPONS'), selector: selectCoupons, setter: setCoupons },
+    { label: t('STEP_TWO.OPTIONS.SHIPPING'), selector: selectShipping, setter: setShipping },
+    { label: t('STEP_TWO.OPTIONS.STORE_POLICIES'), selector: selectStorePolicies, setter: setStorePolicies },
+    { label: t('STEP_TWO.OPTIONS.TAX_SUPPORT'), selector: selectTaxSupport, setter: setTaxSupport },
+    { label: t('STEP_TWO.OPTIONS.PHONE_NUMBER'), selector: selectPhoneNumber, setter: setPhoneNumber }
   ];
   return (
     <div className="max-w-[700px] w-full">
       <div className="w-full grid grid-cols-1 gap-y-1 gap-x-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="p-2">
-          <ColorSwitcher label="Brand colors" colors={colors} onChange={color => dispatch(setBrandColor(color))} />
+          <ColorSwitcher label={t('STEP_TWO.OPTIONS.BRAND_COLOR')} colors={colors} onChange={color => dispatch(setBrandColor(color))} />
         </div>
         {switches.map(({ label, selector, setter }) => (
           <div className="p-2" key={label}>
@@ -55,4 +58,4 @@ function Step2({}: Step2Props) {
   );
 }
 
-export default Step2;
+export default withTranslation()(Step2);
