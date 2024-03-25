@@ -9,6 +9,7 @@ const config: Config = {
           iconBlue: '#6c8eef',
           iconGray: '#8792a2',
           default: '#3c4257',
+          background: '#f6f8fb',
           outline: 'rgba(58, 151, 212, 0.36)'
         },
         blue: '#635bff',
