@@ -8,8 +8,8 @@ import StepDetail from './StepDetail/StepDetail';
 
 function Stepper() {
   const currentStep = useAppSelector(selectCurrentStep);
-  const steps = [null, Step1, Step2, Step3];
-  const StepComponent = steps[currentStep];
+  const steps = [Step1, Step2, Step3];
+  const StepComponent = steps[currentStep - 1];
   return (
     <div className="pb-6">
       <div className="flex flex-col">
