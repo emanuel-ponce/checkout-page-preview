@@ -16,7 +16,7 @@ const config: Config = {
         slate: 'rgba(60, 66, 87, 0.12)'
       },
       boxShadow: {
-        md: ' 0 0 0 2px rgba(58, 151, 212, 0.36)'
+        md: '0 0 0 3px rgba(58, 151, 212, 0.36)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

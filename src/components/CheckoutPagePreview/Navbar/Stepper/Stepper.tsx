@@ -8,6 +8,7 @@ import StepDetail from './StepDetail/StepDetail';
 
 function Stepper() {
   const currentStep = useAppSelector(selectCurrentStep);
+  const totalSteps = useAppSelector(selectTotalSteps);
   const steps = [Step1, Step2, Step3];
   const StepComponent = steps[currentStep - 1];
   return (
@@ -17,7 +18,7 @@ function Stepper() {
         <div className="flex flex-1 justify-between">
           <StepDetail />
           {StepComponent && <StepComponent />}
-          <NextButton />
+          {currentStep < totalSteps ? <NextButton /> : <div />}
         </div>
       </div>
     </div>
