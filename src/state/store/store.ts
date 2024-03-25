@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { businessModelSliceReducer } from '@slices/local/businessModel.slice';
 import { customizationSliceReducer } from '@slices/local/customization.slice';
+import { previewSliceReducer } from '@slices/local/preview.slice';
 import { stepperSliceReducer } from '@slices/local/stepper.slice';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
@@ -8,7 +9,8 @@ const store = configureStore({
   reducer: {
     businessModel: businessModelSliceReducer,
     stepper: stepperSliceReducer,
-    customization: customizationSliceReducer
+    customization: customizationSliceReducer,
+    preview: previewSliceReducer
   }
 });
 
