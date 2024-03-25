@@ -1,23 +1,27 @@
 import { Listbox } from '@headlessui/react';
+import { WithTranslation } from 'next-i18next';
 import Flag from 'react-flagkit';
+import { withTranslation } from 'react-i18next';
 import { IoIosArrowDown } from 'react-icons/io';
 import { LOCATIONS_ENUM } from 'shared/enums/locations.enum';
-
+import { loadTranslations } from './i18n/translations';
+import i18n from 'shared/i18n/i18n.config';
+loadTranslations(i18n);
 interface LocationOption {
   value: LOCATIONS_ENUM;
   label: string;
 }
 
-interface LocationDropdownProps {
+interface LocationDropdownProps extends WithTranslation {
   selectedLocation: LOCATIONS_ENUM;
   options: LocationOption[];
   onChange: (optionSelected: LOCATIONS_ENUM) => void;
 }
 
-function LocationDropdown({ selectedLocation, onChange, options }: LocationDropdownProps) {
+function LocationDropdown({ t, selectedLocation, onChange, options }: LocationDropdownProps) {
   return (
     <div className="border border-gray/20 rounded-[4px] px-2 py-1 flex items-center gap-2 relative h-full focus:shadow-md">
-      <div className="text-gray font-medium text-sm ">Customer location</div>
+      <div className="text-gray font-medium text-sm ">{t('LOCATION_DROPDOWN.LABEL')}</div>
       <div className="border-r-[2px] border-r-gray/70 h-3"></div>
       <Listbox value={selectedLocation} onChange={onChange}>
         <Listbox.Button>
@@ -40,4 +44,4 @@ function LocationDropdown({ selectedLocation, onChange, options }: LocationDropd
   );
 }
 
-export default LocationDropdown;
+export default withTranslation()(LocationDropdown);
