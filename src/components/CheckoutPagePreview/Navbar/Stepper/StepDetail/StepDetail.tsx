@@ -16,7 +16,7 @@ function StepDetail({ t }: WithTranslation) {
   const [isOnHover, setIsOnHover] = useState(false);
   return (
     <div className={`min-w-[140px] ${currentStep > 1 ? 'cursor-pointer' : ''}`} onClick={() => currentStep > 1 && dispatch(beforeStep())} onMouseEnter={() => setIsOnHover(true)} onMouseLeave={() => setIsOnHover(false)}>
-      <div className="flex items-center">
+      <div className="flex items-center h-[21px]">
         {currentStep > 1 && <FiArrowLeft className="text-theme-iconGray mr-2" />}
         <span className="font-medium">{currentStep === 1 || !isOnHover ? texts[currentStep - 1] : t('STEP_DETAIL.BACK_BUTTON')}</span>
         {(currentStep === 1 || !isOnHover) && <span className="text-xs ml-2">{t('STEP_DETAIL.STEPS_COUNTER', { currentStep, totalSteps })}</span>}

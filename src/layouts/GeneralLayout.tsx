@@ -1,16 +1,15 @@
-import Header from '@components/CheckoutPagePreview/Navbar/Header/Header';
 import Navbar from '@components/CheckoutPagePreview/Navbar/Navbar';
 import { ReactNode } from 'react';
-
+import 'tailwindcss/tailwind.css';
 interface GeneralLayoutProps {
   children: ReactNode;
 }
 
 export default function GeneralLayout({ children }: GeneralLayoutProps) {
   return (
-    <div>
+    <div className="flex flex-col w-full" style={{ height: '100vh' }}>
       <Navbar />
-      <div className={`min-h-[calc(100vh-155px)]`}>{children}</div>
+      <div style={{ flexGrow: 1, paddingTop: '40px', backgroundColor: '#f6f8fb' }}>{children}</div>
     </div>
   );
 }

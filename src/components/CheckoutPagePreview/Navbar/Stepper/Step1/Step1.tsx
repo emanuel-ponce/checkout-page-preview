@@ -12,10 +12,10 @@ loadTranslations(i18n);
 function Step1({ t }: WithTranslation) {
   const dispatch = useAppDispatch();
   const businessModelSelected = useAppSelector(selectSelectedBusinessModel);
-  const oneTimePaymentIcon = <BsBoxFill className="mt-1 w-[12px] h-[17px] text-theme-iconBlue" />;
-  const recurringPaymentIcon = <RiRefreshFill className="mt-1 w-[12px] h-[17px] text-theme-iconBlue" />;
+  const oneTimePaymentIcon = <BsBoxFill className="mt-1 w-[12px] h-[17px]" />;
+  const recurringPaymentIcon = <RiRefreshFill className="mt-1 w-[12px] h-[17px]" />;
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 min-w-[630px]">
       <BusinessModelButton
         onClick={() => dispatch(setSelectedBusinessModel(BUSINESS_MODEL_TYPES_ENUM.ONE_TIME_PAYMENT))}
         isSelected={businessModelSelected === BUSINESS_MODEL_TYPES_ENUM.ONE_TIME_PAYMENT}
