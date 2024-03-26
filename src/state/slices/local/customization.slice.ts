@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from 'store';
 
 export enum BRAND_COLOR_OPTIONS {
-  LIGHT = 'rgb(255, 255, 255);',
-  DARK = 'rgb(25, 37, 82)'
+  WHITE = 'rgb(255, 255, 255)',
+  BLUE = 'rgb(208, 216, 245)'
 }
 
 interface IState {
@@ -19,7 +19,7 @@ interface IState {
 
 const initialState: IState = {
   values: {
-    brandColor: BRAND_COLOR_OPTIONS.LIGHT,
+    brandColor: BRAND_COLOR_OPTIONS.WHITE,
     coupons: false,
     phoneNumber: false,
     shipping: false,

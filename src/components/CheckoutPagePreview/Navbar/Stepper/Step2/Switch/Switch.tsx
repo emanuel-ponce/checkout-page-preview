@@ -13,8 +13,8 @@ interface SwitchProps extends SwitchInputProps {
 const SwitchInput = forwardRef<HTMLInputElement, SwitchInputProps>((props, ref) => (
   <label className="cursor-pointer">
     <input type="checkbox" className="hidden" ref={ref} {...props} />
-    <div className={`w-7 rounded-full focus:shadow-md ${props.checked ? 'bg-blue' : 'bg-slate'}`}>
-      <div className={`w-fit shadow-sm rounded-full transition-all duration-500 text-white ${props.checked ? 'bg-blue-500 translate-x-3' : 'bg-gray -rotate-180'}`}>
+    <div className={`w-7 rounded-full focus:shadow-md-blue ${props.checked ? 'bg-blue-400' : 'bg-gray-400'}`}>
+      <div className={`w-fit shadow-sm rounded-full transition-all duration-500 text-white ${props.checked ? 'bg-blue-500 translate-x-3' : 'bg-gray-500 -rotate-180'}`}>
         <FaCircle />
       </div>
     </div>

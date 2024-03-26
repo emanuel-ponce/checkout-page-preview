@@ -15,7 +15,7 @@ function Step1({ t }: WithTranslation) {
   const oneTimePaymentIcon = <BsBoxFill className="mt-1 w-[12px] h-[17px]" />;
   const recurringPaymentIcon = <RiRefreshFill className="mt-1 w-[12px] h-[17px]" />;
   return (
-    <div className="flex gap-3 min-w-[630px]">
+    <div className="flex gap-3 min-w-[630px] tablet-l:min-w-[150px] mobile-l:flex-col tablet-m:mt-4">
       <BusinessModelButton
         onClick={() => dispatch(setSelectedBusinessModel(BUSINESS_MODEL_TYPES_ENUM.ONE_TIME_PAYMENT))}
         isSelected={businessModelSelected === BUSINESS_MODEL_TYPES_ENUM.ONE_TIME_PAYMENT}

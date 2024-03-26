@@ -17,7 +17,7 @@ function DeviceSelector({ optionSelected, onChange }: DeviceSelectorProps) {
       {options.map((option, index) => (
         <button
           key={option.value}
-          className={`h-full py-[7px] border border-gray/20 ${optionSelected === option.value ? 'text-theme-iconBlue' : 'text-gray/50'} ${index === 0 ? 'pl-[10px] pr-2 rounded-l-[4px] border-r-0' : 'pl-2 pr-[10px] rounded-r-[4px] border-l-0'} focus:shadow-md`}
+          className={`h-full py-[7px] border border-gray-500/20 ${optionSelected === option.value ? 'text-theme-iconBlue' : 'text-gray-500/50'} ${index === 0 ? 'pl-[10px] pr-2 rounded-l-[4px] border-r-0' : 'pl-2 pr-[10px] rounded-r-[4px] border-l-0'} focus:shadow-md-blue`}
           onClick={() => onChange(option.value)}
         >
           {option.icon}
