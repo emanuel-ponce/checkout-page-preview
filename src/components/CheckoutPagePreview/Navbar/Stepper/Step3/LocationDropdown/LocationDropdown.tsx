@@ -21,7 +21,10 @@ interface LocationDropdownProps extends WithTranslation {
 function LocationDropdown({ t, selectedLocation, onChange, options }: LocationDropdownProps) {
   return (
     <div className="border border-gray-500/20 rounded-[4px] px-2 py-1 flex items-center gap-2 relative h-full focus:shadow-md-blue">
-      <div className="text-gray-500 font-medium text-sm ">{t('LOCATION_DROPDOWN.LABEL')}</div>
+      <div className="text-gray-500 font-medium text-sm ">
+        <span className="hidden mobile-l:block">{t('LOCATION_DROPDOWN.LABEL.MOBILE')}</span>
+        <span className="mobile-l:hidden">{t('LOCATION_DROPDOWN.LABEL.DESKTOP')}</span>
+      </div>
       <div className="border-r-[2px] border-r-gray-500/70 h-3"></div>
       <Listbox value={selectedLocation} onChange={onChange}>
         <Listbox.Button>

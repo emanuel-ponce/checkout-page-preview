@@ -7,9 +7,9 @@ interface GeneralLayoutProps {
 
 export default function GeneralLayout({ children }: GeneralLayoutProps) {
   return (
-    <div className="flex flex-col w-full" style={{ height: '100vh' }}>
+    <div className="flex flex-col w-full h-screen">
       <Navbar />
-      <div style={{ flexGrow: 1, paddingTop: '40px', backgroundColor: '#f6f8fb' }}>{children}</div>
+      <div className="flex-grow pt-[40px] bg-gray-200 tablet-m:bg-white">{children}</div>
     </div>
   );
 }

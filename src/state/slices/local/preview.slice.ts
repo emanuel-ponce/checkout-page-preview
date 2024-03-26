@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { DEVICES_OPTIONS_ENUM } from 'shared/enums/devicesOptions.enum';
 import { LOCATIONS_ENUM } from 'shared/enums/locations.enum';
 import { RootState } from 'store';
+import { stepperSlice } from './stepper.slice';
 
 interface IState {
   values: {
@@ -17,6 +18,8 @@ const initialState: IState = {
   }
 };
 
+const isBeforeStepAction = (action: any) => stepperSlice.actions.beforeStep.match(action);
+
 export const previewSlice = createSlice({
   name: 'preview',
   initialState,
@@ -27,6 +30,11 @@ export const previewSlice = createSlice({
     setLocation: (state, { payload }: { payload: IState['values']['location'] }) => {
       state.values.location = payload;
     }
+  },
+  extraReducers: builder => {
+    builder.addMatcher(isBeforeStepAction, state => {
+      state.values.device = DEVICES_OPTIONS_ENUM.DESKTOP;
+    });
   }
 });
 
