@@ -1,0 +1,12 @@
+{
+  "customization": {
+    "customization": {
+      "brandColor": "rgb(208, 216, 245)",
+      "enabledCoupons": true,
+      "enabledPhoneNumber": true,
+      "enabledShipping": true,
+      "enabledStorePolicies": true,
+      "enabledTaxSupport": true
+    }
+  }
+}
