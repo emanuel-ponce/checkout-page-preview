@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { DEVICES_OPTIONS_ENUM } from 'shared/enums/devicesOptions.enum';
-import { LOCATIONS_ENUM } from 'shared/enums/locations.enum';
 import { RootState } from 'store';
 import { stepperSlice } from './stepper.slice';
+import { LOCATIONS_ENUM } from '@shared/enums/locations.enum';
+import { DEVICES_OPTIONS_ENUM } from '@shared/enums/devicesOptions.enum';
 
 interface IState {
   values: {

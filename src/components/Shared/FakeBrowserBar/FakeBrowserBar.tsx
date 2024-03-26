@@ -1,5 +1,5 @@
 import { MdLock } from 'react-icons/md';
-import { DEVICES_OPTIONS_ENUM } from 'shared/enums/devicesOptions.enum';
+import { DEVICES_OPTIONS_ENUM } from '@shared/enums/devicesOptions.enum';
 interface FakeBrowserBarProps {
   url: string;
   device: DEVICES_OPTIONS_ENUM;

@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 import { FaChevronRight } from 'react-icons/fa';
 import { useAppDispatch, useAppSelector } from 'store';
 import { WithTranslation } from 'next-i18next';
-import i18n from 'shared/i18n/i18n.config';
+import i18n from '@shared/i18n/i18n.config';
 import { loadTranslations } from './i18n/translations';
 import { useUpdateCustomizationMutation } from '@slices/api/customization/customization.api.slice';
 import { PutCustomizationBody } from '@slices/api/customization/customization.api.model';
