@@ -58,6 +58,14 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       }
+    },
+    screens: {
+      'desktop-xl': { min: '1442px' },
+      'desktop-m': { max: '1440px' },
+      'tablet-l': { max: '990px' },
+      'tablet-m': { max: '767px' },
+      'mobile-l': { max: '480px' },
+      'mobile-m': { max: '375px' }
     }
   },
   plugins: []
