@@ -27,12 +27,12 @@ function Step2({ t }: WithTranslation) {
   const brandColor = useAppSelector(selectBrandColor);
   const colors = [
     {
-      color: BRAND_COLOR_OPTIONS.LIGHT,
-      selected: brandColor === BRAND_COLOR_OPTIONS.LIGHT
+      color: BRAND_COLOR_OPTIONS.WHITE,
+      selected: brandColor === BRAND_COLOR_OPTIONS.WHITE
     },
     {
-      color: BRAND_COLOR_OPTIONS.DARK,
-      selected: brandColor === BRAND_COLOR_OPTIONS.DARK
+      color: BRAND_COLOR_OPTIONS.BLUE,
+      selected: brandColor === BRAND_COLOR_OPTIONS.BLUE
     }
   ];
   const switches = [
@@ -43,8 +43,8 @@ function Step2({ t }: WithTranslation) {
     { label: t('STEP_TWO.OPTIONS.PHONE_NUMBER'), selector: selectPhoneNumber, setter: setPhoneNumber }
   ];
   return (
-    <div className="max-w-[700px] w-full">
-      <div className="w-full grid grid-cols-1 gap-y-1 gap-x-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="max-w-[700px] w-full mobile-l:mt-4">
+      <div className="w-full grid mobile-l:grid-cols-1 gap-y-1 gap-x-4 tablet-l:grid-cols-2 grid-cols-3">
         <div className="p-2">
           <ColorSwitcher label={t('STEP_TWO.OPTIONS.BRAND_COLOR')} colors={colors} onChange={color => dispatch(setBrandColor(color))} />
         </div>

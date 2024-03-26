@@ -1,4 +1,4 @@
 export enum LOCATIONS_ENUM {
-  ARGENTINA = 'AR',
+  ESPAÑA = 'ES',
   UNITED_STATES = 'US'
 }

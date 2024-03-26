@@ -20,15 +20,18 @@ interface LocationDropdownProps extends WithTranslation {
 
 function LocationDropdown({ t, selectedLocation, onChange, options }: LocationDropdownProps) {
   return (
-    <div className="border border-gray/20 rounded-[4px] px-2 py-1 flex items-center gap-2 relative h-full focus:shadow-md">
-      <div className="text-gray font-medium text-sm ">{t('LOCATION_DROPDOWN.LABEL')}</div>
-      <div className="border-r-[2px] border-r-gray/70 h-3"></div>
+    <div className="border border-gray-500/20 rounded-[4px] px-2 py-1 flex items-center gap-2 relative h-full focus:shadow-md-blue">
+      <div className="text-gray-500 font-medium text-sm ">
+        <span className="hidden mobile-l:block">{t('LOCATION_DROPDOWN.LABEL.MOBILE')}</span>
+        <span className="mobile-l:hidden">{t('LOCATION_DROPDOWN.LABEL.DESKTOP')}</span>
+      </div>
+      <div className="border-r-[2px] border-r-gray-500/70 h-3"></div>
       <Listbox value={selectedLocation} onChange={onChange}>
         <Listbox.Button>
           <div className="flex gap-2 items-center">
             <Flag country={selectedLocation.toUpperCase()} size={15} />
             <span className="text-sm font-medium">{options.find(option => option.value === selectedLocation)?.label}</span>
-            <IoIosArrowDown className="text-gray" />
+            <IoIosArrowDown className="text-gray-500" />
           </div>
         </Listbox.Button>
         <Listbox.Options className="absolute z-10 py-1 mt-1 overflow-auto text-base bg-white shadow-lg " style={{ top: '100%', left: '50%' }}>

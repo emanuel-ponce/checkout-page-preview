@@ -20,7 +20,7 @@ function Stepper({ t }: WithTranslation) {
     <div className="pb-6">
       <div className="flex flex-col">
         <h1 className="text-2xl font-bold my-[14px]">{t('STEPER.TITLE')}</h1>
-        <div className="flex flex-1 justify-between">
+        <div className="flex tablet-m:flex-col flex-row justify-between">
           <StepDetail />
           {StepComponent && <StepComponent />}
           {currentStep < totalSteps ? <NextButton /> : <div />}

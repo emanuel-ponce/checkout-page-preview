@@ -22,8 +22,8 @@
       "@layouts/*": ["layouts/*"],
       "@components/*": ["components/*"],
       "store": ["state/store/store.ts"]
-    },
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "types.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

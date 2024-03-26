@@ -1,5 +1,8 @@
 export default {
   LOCATION_DROPDOWN: {
-    LABEL: 'Customer location'
+    LABEL: {
+      DESKTOP: 'Customer location',
+      MOBILE: 'Location'
+    }
   }
 };
