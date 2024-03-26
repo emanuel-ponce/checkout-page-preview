@@ -1,4 +1,4 @@
 export enum DEVICES_OPTIONS_ENUM {
-  DESKTOP,
-  MOBILE
+  DESKTOP = 'Desktop',
+  MOBILE = 'Mobile'
 }
