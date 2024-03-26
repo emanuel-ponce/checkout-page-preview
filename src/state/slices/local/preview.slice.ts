@@ -13,7 +13,7 @@ interface IState {
 const initialState: IState = {
   values: {
     device: DEVICES_OPTIONS_ENUM.DESKTOP,
-    location: LOCATIONS_ENUM.ARGENTINA
+    location: LOCATIONS_ENUM.ESPAÑA
   }
 };
 

@@ -11,7 +11,7 @@ function Step3({}: Step3Props) {
   const deviceSelected = useAppSelector(selectDeviceSelected);
   const locationSelected = useAppSelector(selectLocationSelected);
   const locationOptions = [
-    { value: LOCATIONS_ENUM.ARGENTINA, label: 'Argentina' },
+    { value: LOCATIONS_ENUM.ESPAÑA, label: 'España' },
     { value: LOCATIONS_ENUM.UNITED_STATES, label: 'United States' }
   ];
   return (

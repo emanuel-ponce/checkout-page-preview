@@ -27,12 +27,12 @@ function Step2({ t }: WithTranslation) {
   const brandColor = useAppSelector(selectBrandColor);
   const colors = [
     {
-      color: BRAND_COLOR_OPTIONS.LIGHT,
-      selected: brandColor === BRAND_COLOR_OPTIONS.LIGHT
+      color: BRAND_COLOR_OPTIONS.WHITE,
+      selected: brandColor === BRAND_COLOR_OPTIONS.WHITE
     },
     {
-      color: BRAND_COLOR_OPTIONS.DARK,
-      selected: brandColor === BRAND_COLOR_OPTIONS.DARK
+      color: BRAND_COLOR_OPTIONS.BLUE,
+      selected: brandColor === BRAND_COLOR_OPTIONS.BLUE
     }
   ];
   const switches = [
