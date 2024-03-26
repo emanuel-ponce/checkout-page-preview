@@ -21,6 +21,7 @@
       "@globalStyles": ["styles/globals.css"],
       "@layouts/*": ["layouts/*"],
       "@components/*": ["components/*"],
+      "@shared/*": ["shared/*"],
       "store": ["state/store/store.ts"]
     }
   },
