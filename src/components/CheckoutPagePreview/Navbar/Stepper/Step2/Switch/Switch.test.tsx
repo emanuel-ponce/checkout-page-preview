@@ -10,7 +10,7 @@ describe('Switch component', () => {
     expect(screen.getByText('Test Switch')).toBeInTheDocument();
   });
 
-  it('changes state when clicked', () => {
+  it('call onChange when clicked', () => {
     const mockOnChange = jest.fn();
     render(<Switch label="Test Switch" checked={false} onChange={mockOnChange} />);
 

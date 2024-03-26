@@ -1,6 +1,6 @@
 import { AiOutlineMobile } from 'react-icons/ai';
 import { FaDesktop } from 'react-icons/fa';
-import { DEVICES_OPTIONS_ENUM } from 'shared/enums/devicesOptions.enum';
+import { DEVICES_OPTIONS_ENUM } from '@shared/enums/devicesOptions.enum';
 
 interface DeviceSelectorProps {
   optionSelected: DEVICES_OPTIONS_ENUM;
@@ -16,6 +16,7 @@ function DeviceSelector({ optionSelected, onChange }: DeviceSelectorProps) {
     <>
       {options.map((option, index) => (
         <button
+          aria-label={option.value}
           key={option.value}
           className={`h-full py-[7px] border border-gray-500/20 ${optionSelected === option.value ? 'text-theme-iconBlue' : 'text-gray-500/50'} ${index === 0 ? 'pl-[10px] pr-2 rounded-l-[4px] border-r-0' : 'pl-2 pr-[10px] rounded-r-[4px] border-l-0'} focus:shadow-md-blue`}
           onClick={() => onChange(option.value)}
