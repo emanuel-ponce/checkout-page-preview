@@ -22,7 +22,8 @@ export default {
           './store': './src/state/store/store.ts',
           './customizationSlice': './src/state/slices/local/customization.slice.ts',
           './stepperSlice': './src/state/slices/local/stepper.slice.ts',
-          './previewSlice': './src/state/slices/local/preview.slice.ts'
+          './previewSlice': './src/state/slices/local/preview.slice.ts',
+          './devicesOptionsEnum': './src/shared/enums/devicesOptions.enum.ts'
         }
       })
     );
