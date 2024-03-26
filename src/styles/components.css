@@ -1,0 +1,21 @@
+.error-message {
+  @apply text-sm font-semibold text-red-500 mt-[5px];
+}
+.form-control {
+  @apply py-[8px] px-[12px] border-[1px] border-slate-300 rounded-[6px] text-[14px];
+}
+.form-control::placeholder {
+  @apply text-[14px] text-gray-300;
+}
+.form-control.form-control-alt::placeholder {
+  @apply text-gray-500;
+}
+.form-control:disabled::placeholder {
+  @apply text-gray-400;
+}
+.form-control:focus {
+  @apply outline-none shadow-md-blue z-10;
+}
+.label-form {
+  @apply mb-[3px] text-[13px] text-gray-600 font-medium;
+}

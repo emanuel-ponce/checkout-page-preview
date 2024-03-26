@@ -14,7 +14,7 @@ function NextButton({ t }: WithTranslation) {
   return (
     <div className="self-end">
       <button
-        className="bg-blue  text-white px-3 py-2 rounded-[4px] flex items-center gap-3 disabled:bg-gray disabled:cursor-no-drop focus:shadow-md"
+        className="bg-blue-400 text-white px-3 py-2 rounded-[4px] flex items-center gap-3 disabled:bg-gray-500 disabled:cursor-no-drop focus:shadow-md-blue"
         onClick={() => dispatch(nextStep())}
         disabled={selectedBusinessModel === BUSINESS_MODEL_TYPES_ENUM.RECURRING_PAYMENT}
       >
