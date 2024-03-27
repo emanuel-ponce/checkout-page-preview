@@ -8,6 +8,10 @@ The project is divided into two repositories:
 - **Main Repository (Checkout Page Preview)**: This repository contains the main checkout page preview implemented with Next.js and Module Federation.
 - **Secondary Repository ([Checkout Page](https://github.com/manuponce1993/checkout-page))**: This repository contains the checkout page. 
 
+## Live Demo
+
+A live demo of the project is available at [https://checkout-page-preview.vercel.app](https://checkout-page-preview.vercel.app).
+
 ## Prerequisites
 
 Before running the project, make sure you have the following installed:
