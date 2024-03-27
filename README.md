@@ -1,40 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Stripe Checkout Page Preview Challenge
 
-## Getting Started
+This project is a challenge to simulate the checkout page preview of Stripe. It is implemented with Next.js and integrated with Module Federation for implementing micro frontends.
 
-First, run the development server:
+## Repositories
+
+The project is divided into two repositories:
+- **Main Repository (Checkout Page Preview)**: This repository contains the main checkout page preview implemented with Next.js and Module Federation.
+- **Secondary Repository ([Checkout Page](https://github.com/manuponce1993/checkout-page))**: This repository contains the checkout page. 
+
+## Prerequisites
+
+Before running the project, make sure you have the following installed:
+- Node.js (version 20.9.0 recommended)
+- npm or yarn
+
+## Running the Project
+
+To run the project, follow these steps:
+
+1. Navigate to the main repository (Checkout Page Preview) and install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+2. Navigate to the [secondary repository](https://github.com/manuponce1993/checkout-page) (Checkout Page) and install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Run both projects concurrently with:
+
+    ```bash
+    npm run dev
+    ```
+
+    - The Checkout Page Preview will run on port 3000.
+    - The Checkout Page will run on port 3001.
+    - If you encounter issues running `npm run dev`, it might be related to a Module Federation issue with environment variables (makeSerializable dependency issue). In such cases, try the following alternative commands based on your operating system:
+
+    - **For Unix-like systems (macOS, Linux):**
+      ```bash
+      npm run dev:unix
+      ```
+
+    - **For Windows:**
+      ```bash
+      npm run dev:windows
+      ```
+
+4. Optionally, you can run the JSON server to mock the API server:
+
+    ```bash
+    npm run json-server
+    ```
+
+    - JSON server will run on port 3000.
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+
+## Running Tests
+
+To run the unit tests, execute the following command in the main repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+npm run test
