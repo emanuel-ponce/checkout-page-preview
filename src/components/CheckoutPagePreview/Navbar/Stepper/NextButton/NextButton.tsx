@@ -21,7 +21,7 @@ function NextButton({ t }: WithTranslation) {
   const enabledShipping = useAppSelector(selectShipping);
   const enabledStorePolicies = useAppSelector(selectStorePolicies);
   const enabledTaxSupport = useAppSelector(selectTaxSupport);
-  const [updateCustomizationSettings, { isLoading: isLoadingCoupon, isError: isBenefitError, data, isSuccess }] = useUpdateCustomizationMutation();
+  const [updateCustomizationSettings] = useUpdateCustomizationMutation();
 
   const putCustomization = async () => {
     const body: PutCustomizationBody = {
