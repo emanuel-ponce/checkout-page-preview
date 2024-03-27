@@ -3,9 +3,9 @@ import { WithTranslation } from 'next-i18next';
 import Flag from 'react-flagkit';
 import { withTranslation } from 'react-i18next';
 import { IoIosArrowDown } from 'react-icons/io';
-import { LOCATIONS_ENUM } from 'shared/enums/locations.enum';
+import { LOCATIONS_ENUM } from '@shared/enums/locations.enum';
 import { loadTranslations } from './i18n/translations';
-import i18n from 'shared/i18n/i18n.config';
+import i18n from '@shared/i18n/i18n.config';
 loadTranslations(i18n);
 interface LocationOption {
   value: LOCATIONS_ENUM;

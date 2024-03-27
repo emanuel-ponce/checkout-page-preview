@@ -2,7 +2,7 @@ import { WithTranslation } from 'next-i18next';
 import { withTranslation } from 'react-i18next';
 import { FiArrowRight } from 'react-icons/fi';
 import { loadTranslations } from './i18n/translations';
-import i18n from 'shared/i18n/i18n.config';
+import i18n from '@shared/i18n/i18n.config';
 
 loadTranslations(i18n);
 

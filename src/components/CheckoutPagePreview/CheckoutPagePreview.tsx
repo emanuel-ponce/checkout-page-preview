@@ -6,11 +6,11 @@ import { WithTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { withTranslation } from 'react-i18next';
-import { DEVICES_OPTIONS_ENUM } from 'shared/enums/devicesOptions.enum';
-import useHandheldDetector from 'shared/hooks/useHandheldDetector/useHandheldDetector';
+import { DEVICES_OPTIONS_ENUM } from '@shared/enums/devicesOptions.enum';
+import useHandheldDetector from '@shared/hooks/useHandheldDetector/useHandheldDetector';
 import { useAppSelector } from 'store';
 import { loadTranslations } from './i18n/translations';
-import i18n from 'shared/i18n/i18n.config';
+import i18n from '@shared/i18n/i18n.config';
 loadTranslations(i18n);
 const CheckoutPage = dynamic(() => import('checkoutPage/pages/index'), {
   ssr: false,

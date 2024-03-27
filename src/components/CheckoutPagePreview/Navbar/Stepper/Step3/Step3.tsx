@@ -2,10 +2,10 @@ import DeviceSelector from './DeviceSelector/DeviceSelector';
 import { useAppDispatch, useAppSelector } from 'store';
 import { selectDeviceSelected, selectLocationSelected, setDevice, setLocation } from '@slices/local/preview.slice';
 import LocationDropdown from './LocationDropdown/LocationDropdown';
-import { LOCATIONS_ENUM } from 'shared/enums/locations.enum';
-import useHandheldDetector from 'shared/hooks/useHandheldDetector/useHandheldDetector';
+import { LOCATIONS_ENUM } from '@shared/enums/locations.enum';
+import useHandheldDetector from '@shared/hooks/useHandheldDetector/useHandheldDetector';
 import { useEffect } from 'react';
-import { DEVICES_OPTIONS_ENUM } from 'shared/enums/devicesOptions.enum';
+import { DEVICES_OPTIONS_ENUM } from '@shared/enums/devicesOptions.enum';
 
 interface Step3Props {}
 

@@ -19,7 +19,7 @@ import ColorSwitcher from './ColorSwitcher/ColorSwitcher';
 import { withTranslation } from 'react-i18next';
 import { WithTranslation } from 'next-i18next';
 import { loadTranslations } from './i18n/translations';
-import i18n from 'shared/i18n/i18n.config';
+import i18n from '@shared/i18n/i18n.config';
 loadTranslations(i18n);
 
 function Step2({ t }: WithTranslation) {
