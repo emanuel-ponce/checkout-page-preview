@@ -38,7 +38,7 @@ To run the project, follow these steps:
 
     - The Checkout Page Preview will run on port 3000.
     - The Checkout Page will run on port 3001.
-    - If you encounter issues running `npm run dev`, it might be related to a Module Federation issue with environment variables. In such cases, try the following alternative commands based on your operating system:
+    - If you encounter issues running `npm run dev`, it might be related to a Module Federation issue with environment variables (makeSerializable dependency issue). In such cases, try the following alternative commands based on your operating system:
 
     - **For Unix-like systems (macOS, Linux):**
       ```bash
