@@ -11,7 +11,7 @@ The project is divided into two repositories:
 ## Prerequisites
 
 Before running the project, make sure you have the following installed:
-- Node.js
+- Node.js (version 20.9.0 recommended)
 - npm or yarn
 
 ## Running the Project
