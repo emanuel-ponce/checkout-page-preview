@@ -6,7 +6,7 @@ This project is a challenge to simulate the checkout page preview of Stripe. It 
 
 The project is divided into two repositories:
 - **Main Repository (Checkout Page Preview)**: This repository contains the main checkout page preview implemented with Next.js and Module Federation.
-- **Secondary Repository (Checkout Page)**: This repository contains the checkout page.
+- **Secondary Repository ([Checkout Page](https://github.com/manuponce1993/checkout-page))**: This repository contains the checkout page. 
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ To run the project, follow these steps:
     npm install
     ```
 
-2. Navigate to the secondary repository (Checkout Page) and install the dependencies:
+2. Navigate to the [secondary repository](https://github.com/manuponce1993/checkout-page) (Checkout Page) and install the dependencies:
 
     ```bash
     npm install
@@ -38,6 +38,17 @@ To run the project, follow these steps:
 
     - The Checkout Page Preview will run on port 3000.
     - The Checkout Page will run on port 3001.
+    - If you encounter issues running `npm run dev`, it might be related to a Module Federation issue with environment variables. In such cases, try the following alternative commands based on your operating system:
+
+    - **For Unix-like systems (macOS, Linux):**
+      ```bash
+      npm run dev:unix
+      ```
+
+    - **For Windows:**
+      ```bash
+      npm run dev:windows
+      ```
 
 4. Optionally, you can run the JSON server to mock the API server:
 
