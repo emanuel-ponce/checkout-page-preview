@@ -23,7 +23,7 @@ function CheckoutPagePreview({ t }: WithTranslation) {
   const deviceSelected = useAppSelector(selectDeviceSelected);
   const isHandheld = useHandheldDetector();
   const mobileWrapperClasses = 'w-[350px] rounded-[34px] max-h-[700px]';
-  const desktopWrapperClasses = 'rounded-md w-[1280px]';
+  const desktopWrapperClasses = 'rounded-md w-[1000px]';
   const step1ClassesWrapper = `rounded-md`;
   const step2ClassesWrapper = `rounded-md w-[720px] overflow-y-auto`;
   const step3ClassesWrapper = `${deviceSelected === DEVICES_OPTIONS_ENUM.DESKTOP ? desktopWrapperClasses : mobileWrapperClasses} overflow-y-auto`;
